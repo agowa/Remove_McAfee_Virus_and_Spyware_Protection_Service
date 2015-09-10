@@ -78,6 +78,15 @@ FOR /F "tokens=2* delims=\" %%a IN ('REG QUERY HKU ^|Findstr /R "DEFAULT S-1-5-[
 
 timeout /t 2 /nobreak
 
+:CheckOS
+IF EXIST "%PROGRAMFILES(X86)%" (GOTO 64BIT) ELSE (GOTO 32BIT)
+:64BIT
+pushd %~dp0\x86
+GOTO END
+:32BIT
+pushd %~dp0\x64
+GOTO END
+:END
 REM Delete Drivers
 devcon.exe remove @ROOT\LEGACY_MFEAPFK\0000 /f >> %Logfile% 2>&1
 devcon.exe remove @ROOT\LEGACY_MFEAVFK01\0000 /f >> %Logfile% 2>&1
@@ -86,6 +95,6 @@ devcon.exe remove @ROOT\LEGACY_MFEHIDK\0000 /f >> %Logfile% 2>&1
 devcon.exe remove @ROOT\LEGACY_MFERKDET\0000 /f >> %Logfile% 2>&1
 devcon.exe remove @ROOT\LEGACY_MFETDIK\0000 /f >> %Logfile% 2>&1
 devcon.exe remove @ROOT\LEGACY_MFEWFPK\0000 /f >> %Logfile% 2>&1
-
+popd
 
 timeout /t 5
