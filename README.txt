@@ -8,7 +8,7 @@ If you use this, the following will happen:
  + You're able to reinstall McAfee to fix the Problems above and go the intended way of removal
 
 
-1. Download devcon from Microsoft and place in same directory as this script.
+1. Download devcon from Microsoft and place in same directory as this script ( http://social.technet.microsoft.com/wiki/contents/articles/182.how-to-obtain-the-current-version-of-device-console-utility-devcon-exe.aspx ). Pay attention IA64 is not for x64, you need the AMD64 version.
 2. Run the script as Administrator, you may deploy it via GPO if wanted or place on a shared folder and run via psexec
 3. Reinstall McAfee
 4. Use MCPR or MVSUninst to remove McAfee without breaking your Windows
