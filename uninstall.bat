@@ -25,7 +25,7 @@ echo THE SOFTWARE.
 
 
 set Logfile="C:\McUninstall.log"
-rm %Logfile%
+del %Logfile%
 
 echo "Kill all McAfee tasks" >> %Logfile% 2>&1
 taskkill /IM myAgtSvc.exe /T /F >> %Logfile% 2>&1
