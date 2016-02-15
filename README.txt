@@ -20,3 +20,16 @@ DON'T USE THIS FOR BLACK HAT PURPOSES (ILLEGAL HACKING)
 This script kills McAfee and would allow running malicious code, without the Administrator knowing about from the dashboard (if you skip step 3-4) but you're may break essential software.
 After a view days the dashboard shows an out of date message (because the client hasn't contacted the server), but not the correct McAfee has been removed one.
 So keep that in mind if you use it for your awareness building operations or fixing your broken McAfee uninstaller
+
+
+
+For Enterpise SEcurity (Server):
+If the normal uninstall doesn't work, you can do the following:
+1. Remove the MSI Installation Point using Windows Installer CleanUp Utility from http://www.majorgeeks.com/files/details/windows_installer_cleanup_utility.html
+2. Delete the folder C:\Program Files\McAfee
+3. Delete the folder C:\Program Files (x86)\McAfee
+4. Stop and delete all services related to mcafee
+5. Delete all non plug and play drivers related to mcafee
+6. Reinstall McAfee using the original setup files or http://www.mcafee.com/us/downloads/downloads.aspx
+7. Perform a normal uninstall.
+8. Delete the remaining services, drivers and folders.
