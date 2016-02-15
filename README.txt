@@ -23,7 +23,7 @@ So keep that in mind if you use it for your awareness building operations or fix
 
 
 
-For Enterpise SEcurity (Server):
+For Enterpise Security (Server):
 If the normal uninstall doesn't work, you can do the following:
 1. Remove the MSI Installation Point using Windows Installer CleanUp Utility from http://www.majorgeeks.com/files/details/windows_installer_cleanup_utility.html
 2. Delete the folder C:\Program Files\McAfee
